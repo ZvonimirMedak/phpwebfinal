@@ -130,8 +130,13 @@ const changeItemState=(name,state)=>{
 }
 
 const removeitem=(name)=>{
-    const item = document.getElementsByClassName(`${name.id}-li`);
+  const item = document.getElementsByClassName(`${name.id}-li`);
+  item[0].style = "transform: translateX(-350px); transition: all 1s;"
+  window.setTimeout(()=>{
     item[0].remove();
-    document.getElementById("cartAmountID").innerHTML = counter.decrement();
+    document.getElementById('cartAmountID').innerHTML = counter.decrement();
+    openCloseSlider();
+    translateItems('0px')
     changeItemState(name.id,false);
+  },700)
 }

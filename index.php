@@ -47,20 +47,20 @@
                 </button>
                 <p id="cartAmountID" class="cartAmount mediumText family">0</p>
             </div>
-            <div id="cart">
-                <div >
-                    <img src="./src/assets/triangle.svg" alt="triangle"/>
+            <div id="cart" class="cartContainer">
+                <div class="triangleContainer">
+                    <img src="./src/assets/triangle.svg" alt="triangle" loading="lazy"/>
                 </div>
-                <h2 >Moja košarica</h2>
-                <button id="slideUpButton" type="button" aria-label="scroll up button">
-                    <img src="src/assets/arrowUp.svg" alt="arrow-up">
+                <h2 class="cart-title mediumText family">Moja košarica</h2>
+                <button id="slideUpButton" type="button" aria-label="scroll up button" class="buttonSliderContainer arrow">
+                    <img loading="lazy" src="src/assets/arrowUp.svg" class="arrowImage" alt="arrow-up">
                 </button>
                 <ul id="cartList"></ul>
-                <button id="slideDownButton" aria-label="scroll down button" type="button">
-                    <img src="src/assets/arrowDown.svg" alt="arrow-down">
+                <button id="slideDownButton" aria-label="scroll down button" type="button" class="buttonSliderContainer arrow">
+                    <img loading="lazy" src="src/assets/arrowDown.svg" class="arrowImage" alt="arrow-down">
                 </button>
-                <button type="submit">
-                    <p>Kupi sada</p>
+                <button class="buyNowButton" type="submit">
+                    <p class="buyNowButtonText largeText family">Kupi sada</p>
                 </button>
             </div>
         </section>
