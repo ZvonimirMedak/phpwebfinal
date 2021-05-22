@@ -1,6 +1,6 @@
 # LV 3 zadatak - Čvarci.net v2
 
-### Heroku LINK: 
+### Heroku LINK: https://web-lv3-tvor1.herokuapp.com/
 
 <hr />
 
