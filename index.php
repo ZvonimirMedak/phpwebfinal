@@ -47,6 +47,22 @@
                 </button>
                 <p id="cartAmountID" class="cartAmount mediumText family">0</p>
             </div>
+            <div id="cart">
+                <div >
+                    <img src="./src/assets/triangle.svg" alt="triangle"/>
+                </div>
+                <h2 >Moja košarica</h2>
+                <button id="slideUpButton" type="button" aria-label="scroll up button">
+                    <img src="src/assets/arrowUp.svg" alt="arrow-up">
+                </button>
+                <ul id="cartList"></ul>
+                <button id="slideDownButton" aria-label="scroll down button" type="button">
+                    <img src="src/assets/arrowDown.svg" alt="arrow-down">
+                </button>
+                <button type="submit">
+                    <p>Kupi sada</p>
+                </button>
+            </div>
         </section>
     </header>
     <ul class="deliveryList" aria-label="lista o dostavi i porijeklu">
