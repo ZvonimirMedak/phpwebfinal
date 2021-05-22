@@ -1,0 +1,1161 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.mainContainer {
+    display: flex;
+    flex-direction: column-reverse;
+}
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.triangleContainer{
+    position: absolute;
+    top: -30px;
+    right: 25px;
+}
+
+button:disabled,
+button[disabled]{
+  background-color: #E5E5E5;
+  cursor: unset;
+
+}
+.cvarciTitleBottomMargin {
+    margin-bottom: 30px;
+}
+.cartButton{
+    cursor: pointer;
+    background-color: inherit;
+}
+.loginIcon {
+    padding-bottom: 4px;
+}
+#cart{
+    transition: all 1s;
+}
+
+
+.cartButton:hover {
+    background: #eee;
+}
+
+#mainTitle {
+    font-size: 72px;
+    letter-spacing: 0.5vw;
+    line-height: 82px;
+    font-family: "Roboto";
+    font-weight: 300;
+    color: #3f4255;
+    max-width: 600px;
+}
+.cvarciImage {
+    width: 760px;
+    height: 760px;
+}
+.textYellowColor {
+    color: #B79C10;
+}
+.spaceBetweenXAxis {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.infoContainer {
+    margin-left: 270px;
+    margin-right: 50px;
+}
+.optionsContainer {
+    display: flex;
+    margin-top: 57px;
+}
+.customButton {
+    border: 1px solid #ffe500;
+    border-radius: 4px;
+    background-color: white;
+    margin-right: 24px;
+    padding: 16px 18px;
+    cursor: pointer;
+}
+.addToCartButton {
+    cursor: pointer;
+    background-color: #ffe145;
+    padding: 11px 23px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+.cartIcon {
+    width: 20px;
+    height: 20px;
+}
+.cvarciMarginBottom {
+    margin-bottom: 20px;
+}
+.positionCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.positionLeft {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.mediumText {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+}
+.largeText {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+}
+.deliveryList {
+    list-style: none;
+    display: flex;
+    margin-left: 60px;
+    margin-bottom: 128px;
+}
+.deliveryItem {
+    padding: 22px 24px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+    max-width: 236px;
+}
+.deliveryImage {
+    margin-right: 16px;
+}
+.largeBoldText {
+    font-size: 24px;
+    line-height: 32px;
+    color: #3f4255;
+    font-weight: 700;
+}
+.footerContainer {
+    padding: 72px 83px 32px 83px;
+}
+.footerTopContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.contactList {
+    list-style: none;
+}
+.logoBorder {
+    width: 300px;
+    border-bottom: 1px solid #d4d7e5;
+    padding-bottom: 20px;
+}
+.contactItem {
+    padding-left: 180px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+.anchorColor{
+    color: #9093a6;
+}
+.footerBottomContainer {
+    padding-top: 27px;
+}
+.footerIconList {
+    display: flex;
+    list-style: none;
+}
+.iconItem {
+    padding-right: 32px;
+}
+.securityContainer {
+    display: flex;
+    list-style: none;
+}
+.securityItem {
+    padding-left: 58px;
+}
+
+.headerContainer {
+    margin-right: 80px;
+    margin-left: 80px;
+}
+.loginButton {
+    background-color: inherit;
+    padding: 4px;
+    cursor: pointer;
+    margin-right: 70px;
+}
+.loginButton:hover {
+    background: #eee;
+}
+.buttonWithoutOutline{
+    border: none;
+    outline: none;
+}
+.family {
+    letter-spacing: 0.5px;
+    font-family: "Roboto";
+}
+.headerRightText {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    color: #9093a6;
+}
+.menuStyle {
+    cursor: pointer;
+    width: auto;
+    height: auto;
+}
+.userInfoContainer {
+    background-color: #f2f4fa;
+}
+.innerContainer {
+    padding-bottom: 60px;
+    padding-top: 60px;
+}
+.infoTextPosition {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 131px;
+}
+.centerColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.h2TitleStyle {
+    font-size: 36px;
+    font-weight: 300;
+    color: #3f4255;
+    letter-spacing: 0.2vw;
+}
+.cvarciNameBoldStyle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+.inputContainer {
+    padding: 26px 16px 26px 16px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    font-size: 17px;
+    outline: none;
+    border: none;
+    margin-right: 12px;
+}
+.amountContainer {
+    padding: 5px 14px;
+    border-radius: 6px;
+    font-size: 16px;
+    width: 40px;
+    outline: none;
+    border: 1px solid #E8E8E8;
+    margin-left: 13px;
+    box-sizing: border-box;
+}
+.pricePerWeightMargin {
+    margin-left: 5px;
+}
+.sendButton {
+    cursor: pointer;
+    background-color: #ffe145;
+    padding: 26px;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+}
+.restaurantHeaderContainer {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+.buttonTextColor {
+    color: #9093a6;
+}
+.textWidth {
+    max-width: 400px;
+}
+.seeAllButton {
+    padding: 14px 24px;
+    cursor: pointer;
+    background-color: #f2f4fa;
+}
+.restaurantListContainer {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.cvarciListContainer {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 128px;
+}
+.listImageSize {
+    width: 300px;
+    height: 300px;
+}
+.cvarciListImageSize {
+    width: 276px;
+    height: 300px;
+}
+.cvarciImageSize {
+    width: 300px;
+    height: 300px;
+}
+.cvarciTitle {
+    text-align: center;
+}
+.edgeContainer {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.leftNavigation {
+    transform: rotate(180deg);
+    left: -5px;
+}
+.rightNavigation {
+    right: -5px;
+}
+.navigationButton {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 8px 40px rgba(0, 0, 0, 0.08);
+    background-color: white;
+    cursor: pointer;
+    position: absolute;
+}
+.mapContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+.mapTextWidth {
+    max-width: 400px;
+}
+.mapSize {
+    width: 680px;
+    height: 300px;
+    position: relative;
+    left: 40px;
+}
+.infoListContainer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.circleList {
+    display: flex;
+    width: 75.5vw;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f2f4fa;
+}
+.circle {
+    background: yellow;
+}
+.circleSize {
+    width: 126px;
+    height: 126px;
+    border-radius: 50%;
+}
+.innerCircle {
+    border: 1px solid #b79c10;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+    bottom: 22px;
+}
+.paginationContainer{
+    opacity: 0;
+}
+.instagramTitleContainer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 12px;
+    padding-top: 20px;
+}
+.instagramTextPosition{
+    padding-bottom: 4px;
+    padding-left: 10px;
+}
+.instagramContainer {
+    padding-top: 21px;
+    list-style: none;
+}
+.instagramItemPadding {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+.listItemContainer{
+    height: 100px;
+}
+
+.cartContainer {
+  background: #FFFFFF;
+  width: 300px;
+  max-height: 540px;
+  right:50px;
+  list-style: none;
+  top:100px;
+  z-index: 2;
+  position: absolute;
+  opacity: 0;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  font-family: 'Roboto';
+
+}
+
+.buyNowButton{
+    background-color: #FFE145;
+    width: 100%;
+    padding: 11px 0px;
+    border-color: #FFE145;
+    border-radius: 4px;
+    margin-top:17px;
+}
+.buyNowButtonText{
+    letter-spacing: 0.5px;
+    color: #B79C10;
+    line-height: 20px;
+}
+#cartList{
+    max-height: 340px;
+    overflow: hidden;
+}
+#cartList li{
+    display: flex;
+    margin: 10px 0;
+    height: 100px;
+}
+.animateRemoving{
+    height: 0px;
+    transition: height 1s;
+}
+
+#cartList img {
+    height: 95px;
+    margin-right: 20px;
+    width: 95px;
+    border-radius: 6px;
+    vertical-align:middle;
+}
+#cartList .item_name {
+    color: #000000;
+    margin: 0px 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.5px;
+} 
+
+.flex-box-cart{
+    display: flex;
+    justify-content: space-between;
+}
+.arrow{
+    padding: 11px 0;
+}
+#slideDownButton{
+    display: none;
+}
+#slideUpButton{
+    display: none;
+}
+
+.buttonSliderContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.exit-button{
+    text-decoration: none;
+    justify-content: center;
+    vertical-align: middle;
+    display: inline-flex;
+    text-align: center;
+    align-items: center;
+    border-width: 1px;
+    padding-bottom:2px;
+    outline: none;
+    background: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+}
+
+.flex-wrap{
+    width: 360px;
+}
+
+.item_price{
+    margin-top: 19px;
+    font-size: 12px ;
+    letter-spacing: 0.5px;
+}
+
+.weight{
+    font-weight: bold;
+}
+
+.item_quantity{
+    margin-top: 7px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+}
+
+.cart-title{
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(187, 187, 187,0.2);
+}
+
+.cartAmount{
+    font-style: normal;
+    font-weight: bold;
+    line-height: inherit;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #9093A6;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
+
+/*responsive*/
+@media screen and (max-width: 1540px) {
+    #mainTitle {
+        font-size: 54px;
+        letter-spacing: 0.2vw;
+        line-height: 60px;
+    }
+    .cvarciImage {
+        width: 550px;
+        height: 550px;
+    }
+    .footerContainer {
+        padding: 72px 50px 32px 50px;
+    }
+    .largeBoldText {
+        font-size: 18px;
+        line-height: 26px;
+    }
+    .circleSize {
+        width: 86px;
+        height: 86px;
+    }
+    .cartContainer {
+        width: 275px;
+    }
+
+}
+@media screen and (max-width: 1320px) {
+    .customButton {
+        margin-right: 12px;
+        padding: 12px 14px;
+    }
+    .largeText {
+        font-size: 14px;
+    }
+    .buyNowButton {
+        padding: 9px 0px;
+        margin-top: 15px;
+    }
+    .mediumText {
+        font-size: 12px;
+    }
+    .infoContainer {
+        justify-content: space-evenly;
+        margin-left: 40px;
+        margin-right: 0px;
+    }
+    .deliveryImage {
+        width: 30px;
+        height: 30px;
+    }
+    .seeAllButton {
+        padding: 12px 14px;
+    }
+    .addToCartButton {
+        padding: 10px 13px;
+    }
+    .cartContainer {
+        width: 250px;
+    }
+    #cartList .item_name {
+        font-size: 13px;
+    } 
+    .item_price{
+        font-size: 11px ;
+        margin-top: 13px;
+    }
+    .item_quantity{
+        font-size: 11px;
+    }
+
+}
+@media screen and (max-width: 1200px) {
+    #mainTitle {
+        font-size: 36px;
+        line-height: 46px;
+    }
+    .cvarciImage {
+        width: 300px;
+        height: 300px;
+    }
+    .deliveryItem {
+        padding: 18px 20px;
+        max-width: 200px;
+    }
+    .contactItem{
+        padding-left: 100px;
+    }
+    .securityItem{
+        padding-left: 30px;
+    }
+    .footerIconSize{
+        width: 25px;
+        height: 25px;
+    }
+    .largeBoldText {
+        font-size: 14px;
+        line-height: 20px;
+    }
+    .h2TitleStyle {
+        font-size: 24px;
+        letter-spacing: 0.1vw;
+    }
+    .cvarciNameBoldStyle{
+        font-size: 18px;
+        letter-spacing: 0.1vw;
+    }
+    .mapContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .mapSize {
+        width: 400px;
+        height: 150px;
+        left: 0px;
+    }
+    .circleSize {
+        width: 58px;
+        height: 58px;
+    }
+    .innerCircle {
+        bottom: 11px;
+    }
+    .textWidth {
+        max-width: 220px;
+    }
+    .instagramTextPosition{
+        padding-bottom: 0px;
+    }
+    .cartContainer {
+        width: 225px;
+    }
+    #cartList .item_name {
+        font-size: 11px;
+    } 
+    #cartList{
+        max-height: 310px ;
+    }
+    .item_price{
+        font-size: 10px ;
+        margin-top: 11px;
+    }
+
+    .item_quantity{
+        font-size: 10px;
+    }
+    .exit-button{
+        width: 10;
+        height: 10;
+        margin-left: 1px;
+        font-size: 12px;
+    }
+    #cartList li{
+        margin: 5px 0;
+    }
+
+}
+@media screen and (max-width: 921px) {
+    #mainTitle {
+        font-size: 24px;
+        line-height: 48px;
+    }
+    .buttonSliderContainer{
+        height: 20px;
+    }
+    .arrow{
+        padding: 4px;
+    }
+    .cvarciImage {
+        width: 215px;
+        height: 215px;
+    }
+    .infoContainer {
+        margin-right: 20px;
+    }
+    .customButton {
+        padding: 10px 12px;
+    }
+    .largeText {
+        font-size: 12px;
+        line-height: 16px;
+    }
+    .buyNowButton {
+        padding: 6px 0px;
+        margin-top: 13px;
+    }
+    .mediumText {
+        font-size: 10px;
+        line-height: 14px;
+    }
+    .optionsContainer {
+        margin-top: 30px;
+    }
+    .cvarciMarginBottom {
+        margin-bottom: 10px;
+    }
+    .deliveryItem {
+        padding: 12px 16px;
+        max-width: 160px;
+    }
+    .deliveryImage {
+        width: 25px;
+        height: 25px;
+    }
+    .logoBorder {
+        width: 150px;
+        border-bottom: 1px solid #d4d7e5;
+        padding-bottom: 0px;
+    }
+    .contactItem{
+        padding-left: 60px;
+    }
+    .footerContainer {
+        padding: 20px 20px 32px 20px;
+    }
+    .titleImage {
+        width: 100px;
+        height: 100px;
+    }
+    .loginButton {
+        padding: 1px;
+        margin-right: 10px;
+    }
+    .headerRightText {
+        font-size: 8px;
+    }
+    .menuStyle {
+        width: 80px;
+        height: 80px;
+    }
+    .loginIcon {
+        width: 14px;
+        height: 14px;
+        padding-bottom: 2px;
+    }
+    .cartIcon {
+        width: 12px;
+        height: 12px;
+    }
+    .h2TitleStyle {
+        font-size: 18px;
+    }
+    .cvarciNameBoldStyle {
+        font-size: 12px;
+        margin-bottom: 7px;
+    }
+    .inputContainer {
+        padding: 12px 14px;
+        font-size: 12px;
+    }
+    .amountContainer{
+        padding: 3px 7px;
+        font-size: 10px;
+        width: 24px;
+    }
+    .sendButton {
+        padding: 10px;
+    }
+
+    .seeAllButton {
+        padding: 6px 8px;
+    }
+    .addToCartButton {
+        padding: 5px 10px;
+    }
+    .cartContainer {
+        width: 200px;
+        max-height:350px ;
+        top: 80px;
+    }
+    #cartList img {
+        height: 70px;
+        margin-right: 20px;
+        width: 70px;
+        border-radius: 6px;
+        vertical-align:middle;
+    }
+    .exit-button{
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+        margin-top: 1px;
+    }
+
+    .item_price{
+        font-size: 8px ;
+    }
+
+    .item_quantity{
+        font-size: 8px;
+        margin-top: 3px;
+    }
+    #cartList{
+        max-height: 220px;
+    }
+    #cartList li{
+        height: 70px;
+    }
+    #cartList .item_name {
+        font-size: 10px;
+    } 
+}
+
+@media screen and (max-width: 650px) {
+    .deliveryItem {
+        width: 120px;
+        padding-right: 10px;
+        height: 44px;
+        max-width: 140px;
+    }
+    .arrow{
+        padding: 2px;
+    }
+    .arrowImage{
+        height: 7px !important;
+        width: 7px !important;
+        margin-bottom: 5px;
+    }
+    .buttonSliderContainer{
+        height: 12px !important;
+    }
+
+    .footerIconSize{
+        width: 15px;
+        height: 15px;
+    }
+    .securityItem {
+        padding-left: 16px;
+    }
+    .largeBoldText {
+        font-size: 8px;
+        line-height: 14px;
+    }
+    .infoTextPosition {
+        margin-right: 20px;
+    }
+    .h2TitleStyle {
+        font-size: 18px;
+        letter-spacing: 0.1vw;
+    }
+    .listImageSize{
+        width: 250px;
+        height: 250px;
+    }
+    .cvarciListImageSize{
+        width: 230px;
+        height: 250px;
+    }
+    .navigationButton{
+        width: 30px;
+        height: 30px;
+    }
+    .circleSize {
+        width: 40px;
+        height: 40px;
+    }
+    .innerCircle {
+        bottom: 7px;
+    }
+    .cartContainer {
+        width: 140px;
+        top: 80px;
+        padding: 15px;
+    }
+    #cartList img {
+        height: 40px;
+        margin-right: 20px;
+        width: 60px;
+    }
+    #cartList li{
+        height: 50px !important;
+        margin: 0px;
+        padding: 0px;
+    }
+    .exit-button{
+        width: 11px;
+        height: 11px;
+        font-size: 8px;
+        margin-top: 3px;
+        padding-bottom: 0px;
+    }
+
+    #cartList{
+        max-height: 140px;
+    } 
+    
+    .item_price{
+        font-size: 7px ;
+        margin-top: 3px;
+    }
+
+    .item_quantity{
+        font-size: 7px;
+    }
+
+    #cartList .item_name {
+        font-size: 7px;
+    } 
+   
+    .buttonSliderContainer{
+        height: 35px;
+        margin: 5px 0px;
+    }
+    #cartList li{
+        height: 90px;
+    }
+    .buyNowButton {
+        padding: 4px 0px;
+        margin-top: 8px;
+    }
+   .buyNowButtonText{
+       font-size: 8px;
+   }
+}
+@media screen and (max-width: 550px) {
+    #mainTitle {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .customButton {
+        margin-right: 12px;
+        padding: 2px 8px;
+    }
+    .mediumText {
+        font-size: 6px;
+        line-height: 10px;
+    }
+    .largeText {
+        font-size: 7px;
+        line-height: 10px;
+    }
+
+    .cvarciImage {
+        width: 175px;
+        height: 175px;
+    }
+    .deliveryItem {
+        width: 90px;
+        padding-right: 10px;
+        height: 30px;
+        max-width: 140px;
+    }
+    
+    .deliveryList {
+        display: flex;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 60px;
+    }
+    .triangleContainer{
+        width: 20px;
+        height: 20px;
+    }
+    .cvarciTitleBottomMargin {
+        margin-bottom: 15px;
+    }
+    .cvarciListContainer{
+        margin-bottom: 60px;
+    }
+    .contactItem{
+        padding-left: 20px;
+    }
+    .footerIconSize{
+        width: 8px;
+        height: 8px;
+    }
+    .headerContainer {
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .innerContainer {
+        padding: 30px 5px;
+    }
+    .h2TitleStyle {
+        font-size: 13px;
+        letter-spacing: 0.1vw;
+    }
+    .cvarciNameBoldStyle {
+        font-size: 9px;
+        letter-spacing: 0.1vw;
+    }
+    .navigationButton {
+        border-radius: 10px;
+        width: 20px;
+        height: 20px;
+    }
+    .mapSize {
+        width: 250px;
+        height: 100px;
+    }
+    .circleList {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .mapSize {
+        width: 250px;
+        height: 100px;
+    }
+    .circleList {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .innerContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .inputContainer {
+        padding: 6px 6px;
+        font-size: 8px;
+    }
+    .amountContainer {
+        padding: 2px 5px;
+        font-size: 6px;
+        width: 16px;
+        border-radius: 3px;
+    }
+    .sendButton{
+        padding: 6px;
+    }
+    .infoTextPosition{
+        margin-bottom: 10px;
+        margin-right: 0px;
+    }
+    .cartContainer {
+        right:15px;
+    }
+    #cartList img {
+        margin-right: 15px;
+    }
+    .exit-button{
+        font-size: 8px;
+        width: 11px;
+        height: 11px;
+    }
+
+}
+@media screen and (max-width: 500px) {
+    .navigationButton{
+        opacity: 0;
+    }
+    .paginationContainer{
+        opacity: 1;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        margin-bottom: 20px;
+        font-size: 8px;
+    }
+    .paginatedCircle{
+        border: 1px solid black;
+        border-radius: 50%;
+        min-width: 15px;
+        min-height: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+    .activeCircle{
+        color: white;
+        background-color: gray
+    }
+    .seeAllButton{
+        opacity: 0;
+    }
+    .restaurantHeaderContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .instagramTitleContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+    }
+    
+    .cartContainer{
+        right: 10px;
+    }
+}
+@media screen and (max-width: 374px) {
+    #mainTitle {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .cvarciImage {
+        width: 140px;
+        height: 140px;
+    }
+    .securityItem{
+        max-width: 30px;
+    }
+}
