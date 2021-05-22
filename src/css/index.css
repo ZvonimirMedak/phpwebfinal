@@ -23,7 +23,22 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
-
+.cartButton{
+    cursor: pointer;
+    background-color: inherit;
+}
+.cartAmount{
+    font-style: normal;
+    font-weight: bold;
+    line-height: inherit;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.5px;
+    color: #9093A6;
+    text-decoration: none;
+    margin-bottom: 5px;
+    margin-left: 2px;
+}
 button:disabled,
 button[disabled]{
   background-color: #E5E5E5;

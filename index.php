@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="src/css/index.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <script src="./src/script/index.js"></script>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Čvarci.net</title>
@@ -41,7 +42,10 @@
                     <img src="src/assets/person.svg" alt="login" class="loginIcon" />
                     <p class="headerRightText family">PRIJAVI SE</p>
                 </button>
-                <img src="src/assets/cart.svg" alt="cart" class="cartIcon" />
+                <button onclick="toggleCart()" class="cartButton buttonWithoutOutline">
+                    <img src="src/assets/cart.svg" alt="cart" class="cartIcon" />
+                </button>
+                <p id="cartAmountID" class="cartAmount mediumText family">0</p>
             </div>
         </section>
     </header>
@@ -88,7 +92,7 @@
                         <p class="mediumText family">Količina:</p>
                     <input type="number" id="domaci_cvarci" class="amountContainer" size=1 value="1" />
                     </div>
-                    <button id="domaci_cvarci_button" class="addToCartButton positionCenter" type="submit">
+                    <button id="domaci_cvarci_button" onclick="addToCart(domaci_cvarci)" class="addToCartButton positionCenter" type="submit">
                         <p class="largeText family buttonTextColor">Stavi u košaricu</p>
                     </button>
                 </li>
@@ -110,7 +114,7 @@
                         <p class="mediumText family">Količina:</p>
                     <input type="number" id="slavonski_cvarci"  class="amountContainer" size=1 value="1" />
                     </div>
-                    <button id="slavonski_cvarci_button"  class="addToCartButton positionCenter" type="submit">
+                    <button id="slavonski_cvarci_button" onclick="addToCart(slavonski_cvarci)" class="addToCartButton positionCenter" type="submit">
                         <p class="largeText family buttonTextColor">Stavi u košaricu</p>
                     </button>
                 </li>
@@ -132,7 +136,7 @@
                             <p class="mediumText family">Količina:</p>
                         <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1"/>
                         </div>
-                        <button id="pileci_cvarci_button" class="addToCartButton positionCenter" type="submit">
+                        <button id="pileci_cvarci_button" onclick="addToCart(pileci_cvarci)" class="addToCartButton positionCenter" type="submit">
                             <p class="largeText family buttonTextColor">Stavi u košaricu</p>
                         </button>
                     </form>
@@ -155,7 +159,7 @@
                         <p class="mediumText family">Količina:</p>
                     <input type="number" id="cvarci_od_divljaci" class="amountContainer" size=1 value="1" />
                     </div>
-                    <button id="cvarci_od_divljaci_button" class="addToCartButton positionCenter" type="submit">
+                    <button id="cvarci_od_divljaci_button" onclick="addToCart(cvarci_od_divljaci)" class="addToCartButton positionCenter" type="submit">
                         <p class="largeText family buttonTextColor">Stavi u košaricu</p>
                     </button>
                 </li>
