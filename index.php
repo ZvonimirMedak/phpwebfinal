@@ -21,7 +21,7 @@ $sql = "CREATE TABLE newItems (
 
     // instantiate user object
     include_once 'item.php';
-    $item = new Item($conn);
+    //$item = new Item($conn);
     // set user property values
     $name = "čvarak";
     $amount = 12;
