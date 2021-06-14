@@ -28,10 +28,12 @@ if ($_POST){
     $item = new Item($conn);
 
     // set user property values
-    $item->firstname = htmlentities(trim($_POST['name']));
-    $item->lastname = htmlentities(trim($_POST['amount']));
-    $item->email = htmlentities(trim($_POST['price']));
-
+    //$item->name = htmlentities(trim($_POST['name']));
+    //$item->amount = htmlentities(trim($_POST['amount']));
+    //$item->price = htmlentities(trim($_POST['price']));
+    $item->name = "čvarak");
+    $item->amount = 12;
+    $item->price = 50.0;
 
     // if the user able to create
     if($item->create()){
