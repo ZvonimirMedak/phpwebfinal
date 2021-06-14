@@ -25,7 +25,7 @@ if ($_POST){
 
     // instantiate user object
     include_once 'classes/Item.php';
-    $item = new Item($db);
+    $item = new Item($conn);
 
     // set user property values
     $item->firstname = htmlentities(trim($_POST['name']));
