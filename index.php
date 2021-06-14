@@ -24,7 +24,7 @@ echo "</div>";
 if ($_POST){
 
     // instantiate user object
-    include_once 'classes/Item.php';
+    include_once 'src/php/Item.php';
     $item = new Item($conn);
 
     // set user property values
