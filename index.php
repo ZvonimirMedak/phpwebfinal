@@ -27,7 +27,7 @@ $sql = "CREATE TABLE newItems (
     $price = 50.0;
     //write query
     $sql = "INSERT INTO newItems (itemname, amount, price)
-    VALUES ($name, $amount, $price)";
+    VALUES ('$name', '$amount', '$price')";
 
     if ($conn->query($sql) === TRUE) {
         echo "New record created successfully";
