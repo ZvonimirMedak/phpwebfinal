@@ -27,7 +27,7 @@ $sql = "CREATE TABLE Items (
     $amount = 12;
     $price = 50.0;
     //write query
-    $sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
+    $sql = "INSERT INTO items SET name = ?, amount = ?, price = ?";
 
     $prep_state = $this->db_conn->prepare($sql);
 
