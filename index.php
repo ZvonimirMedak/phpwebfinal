@@ -45,7 +45,7 @@ if (isset($_POST['submit'])){
     $item->amount = 12;
     $item->price = 50.0;
     // if the user able to create
-    if($item->create()){
+    /*if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
@@ -62,7 +62,7 @@ if (isset($_POST['submit'])){
                   </button>";
             echo "Error! Unable to create user.";
         echo "</div>";
-    }
+    }*/
 }
 ?>
 
