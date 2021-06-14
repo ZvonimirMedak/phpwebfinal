@@ -16,22 +16,12 @@ $sql = "CREATE TABLE Items (
     name VARCHAR(50) NOT NULL,
     amount INT unsigned NOT NULL,
     price FLOAT(2) NOT NULL)";
-    
-    if ($conn->query($sql) === TRUE) {
-      echo "Table MyGuests created successfully";
-    } else {
-      echo "Error creating table: " . $conn->error;
-    }
-?>
-<?php
-echo "<div class='right-button-margin'>";
+    echo "<div class='right-button-margin'>";
     echo "<a href='index.php' class='btn btn-info pull-right'>";
         echo "<span class='glyphicon glyphicon-list-alt'></span> Read Users ";
     echo "</a>";
-echo "</div>";
-
-
-// check if the form is submitted
+    echo "</div>";
+    // check if the form is submitted
 //if (isset($_POST['submit'])){
 
     // instantiate user object
@@ -65,6 +55,11 @@ echo "</div>";
     }*/
 //}
 ?>
+
+
+
+
+
 
 
 <!DOCTYPE html>
