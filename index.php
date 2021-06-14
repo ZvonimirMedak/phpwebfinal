@@ -31,7 +31,7 @@ if ($_POST){
     //$item->name = htmlentities(trim($_POST['name']));
     //$item->amount = htmlentities(trim($_POST['amount']));
     //$item->price = htmlentities(trim($_POST['price']));
-    $item->name = "čvarak");
+    $item->name = "čvarak";
     $item->amount = 12;
     $item->price = 50.0;
 
