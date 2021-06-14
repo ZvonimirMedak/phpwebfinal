@@ -39,7 +39,17 @@ $sql = "CREATE TABLE newItems (
       } else {
         echo "Error: " . $sql . "<br>" . $conn->error;
       }
-
+      $sql = "SELECT itemname, amount, price FROM newItems";
+      $result = $conn->query($sql);
+      
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+          echo "id: " . $row["itemname"]. " - Name: " . $row["amount"]. " " . $row["price"]. "<br>";
+        }
+      } else {
+        echo "0 results";
+      }
     //$prep_state->bindParam(1, $name);
     //$prep_state->bindParam(2, $amount);
     //$prep_state->bindParam(3, $price);
