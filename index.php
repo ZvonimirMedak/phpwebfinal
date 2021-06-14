@@ -23,7 +23,18 @@ $sql = "CREATE TABLE Items (
     //include_once 'item.php';
     //$item = new Item($conn);
     // set user property values
-    $name = $_POST['name'];
+    $name = "čvarak";
+    $amount = 12;
+    $price = 50.0;
+    //write query
+    $sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
+
+    $prep_state = $this->db_conn->prepare($sql);
+
+    $prep_state->bindParam(1, $name);
+    $prep_state->bindParam(2, $amount);
+    $prep_state->bindParam(3, $price);
+    $prep_state->execute()
     //$item->name = htmlentities(trim($_POST['name']));
     //$item->amount = htmlentities(trim($_POST['amount']));
     //$item->price = htmlentities(trim($_POST['price']));
