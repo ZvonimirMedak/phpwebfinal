@@ -15,7 +15,7 @@ $sql = "CREATE TABLE Items (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
     amount INT(6) UNSIGNED NOT NULL,
-    price FLOAT UNSIGNED,
+    price FLOAT(6) NOT NULL,
     )";
     
     if ($conn->query($sql) === TRUE) {
