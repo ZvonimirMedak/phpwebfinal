@@ -20,7 +20,7 @@ $sql = "CREATE TABLE Items (
     if (isset($_POST['submit'])){
 
     // instantiate user object
-    include_once 'src/php/Item.php';
+    include_once 'item.php';
     //$item = new Item($conn);
     // set user property values
     //$item->name = htmlentities(trim($_POST['name']));
