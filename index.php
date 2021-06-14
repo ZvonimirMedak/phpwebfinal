@@ -21,7 +21,7 @@ echo "</div>";
 
 
 // check if the form is submitted
-/*if ($_POST){
+if ($_POST){
 
     // instantiate user object
     include_once 'src/php/Item.php';
@@ -36,7 +36,7 @@ echo "</div>";
     $item->price = 50.0;
 
     // if the user able to create
-    if($item->create()){
+    /*if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
@@ -53,8 +53,8 @@ echo "</div>";
                   </button>";
             echo "Error! Unable to create user.";
         echo "</div>";
-    }
-}*/
+    }*/
+}
 ?>
 
 
