@@ -13,18 +13,11 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
 ?>
 
 <?php
-echo "<div class='right-button-margin'>";
-    echo "<a href='index.php' class='btn btn-info pull-right'>";
-        echo "<span class='glyphicon glyphicon-list-alt'></span> Read Users ";
-    echo "</a>";
-echo "</div>";
-
-
 // check if the form is submitted
 if ($_POST){
 
     // instantiate user object
-    include_once 'classes/Item.php';
+    include_once 'src/php/Item.php';
     $item = new Item($db);
 
     // set user property values
