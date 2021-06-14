@@ -1,3 +1,62 @@
+<?php
+/*echo "<div class='right-button-margin'>";
+    echo "<a href='index.php' class='btn btn-info pull-right'>";
+        echo "<span class='glyphicon glyphicon-list-alt'></span> Read Users ";
+    echo "</a>";
+echo "</div>";
+
+// get database connection
+include_once 'src/php/Database.php';
+include_once 'src/php/initial.php';
+
+
+// check if the form is submitted
+if ($_POST){
+
+    // instantiate user object
+    include_once 'classes/Item.php';
+    $item = new Item($db);
+
+    // set user property values
+    $item->firstname = htmlentities(trim($_POST['name']));
+    $item->lastname = htmlentities(trim($_POST['amount']));
+    $item->email = htmlentities(trim($_POST['price']));
+
+
+    // if the user able to create
+    if($item->create()){
+        echo "<div class=\"alert alert-success alert-dismissable\">";
+            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
+                        &times;
+                  </button>";
+            echo "Success! User is created.";
+        echo "</div>";
+    }
+
+    // if the user unable to create
+    else{
+        echo "<div class=\"alert alert-danger alert-dismissable\">";
+            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
+                        &times;
+                  </button>";
+            echo "Error! Unable to create user.";
+        echo "</div>";
+    }
+}*/
+?>
+<?php
+//Get Heroku ClearDB connection information
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+?>
+
 <!DOCTYPE html>
 <html lang="hr">
 
@@ -147,10 +206,12 @@
                             / kg
                         </p>
                     </div>
-                    <form>
+                    <form  action='create.php' role="form" method='post'>
                         <div class="positionLeft cvarciMarginBottom">
                             <p class="mediumText family">Količina:</p>
-                        <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1"/>
+                            <input type="text"  class="amountContainer" id="pileci_cvarci" size=1 value="name" name="name"/>
+                            <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="price" name="price"/>
+                        <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1" name="amount"/>
                         </div>
                         <button id="pileci_cvarci_button" onclick="addToCart(pileci_cvarci)" class="addToCartButton positionCenter" type="submit">
                             <p class="largeText family buttonTextColor">Stavi u košaricu</p>
