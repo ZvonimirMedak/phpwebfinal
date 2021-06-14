@@ -62,8 +62,8 @@ echo "</div>";
                   </button>";
             echo "Error! Unable to create user.";
         echo "</div>";
-    }*/
-}
+    }
+}*/
 ?>
 
 
