@@ -29,7 +29,7 @@ $sql = "CREATE TABLE newItems (
     //write query
     $sql = "INSERT INTO newItems SET itemname = ?, amount = ?, price = ?";
 
-    $prep_state = $this->db_conn->prepare($sql);
+    $prep_state = $conn->prepare($sql);
 
     $prep_state->bindParam(1, $name);
     $prep_state->bindParam(2, $amount);
