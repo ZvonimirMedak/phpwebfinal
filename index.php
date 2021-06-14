@@ -23,6 +23,7 @@ $sql = "CREATE TABLE Items (
     //include_once 'item.php';
     //$item = new Item($conn);
     // set user property values
+    $name = $_POST['name'];
     //$item->name = htmlentities(trim($_POST['name']));
     //$item->amount = htmlentities(trim($_POST['amount']));
     //$item->price = htmlentities(trim($_POST['price']));
