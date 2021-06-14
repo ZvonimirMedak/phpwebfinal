@@ -214,7 +214,7 @@ if ($_POST){
                             <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="price" name="price"/>
                         <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1" name="amount"/>
                         </div>
-                        <button id="pileci_cvarci_button" onclick="addToCart(pileci_cvarci)" class="addToCartButton positionCenter" type="submit">
+                        <button id="pileci_cvarci_button" class="addToCartButton positionCenter" type="submit">
                             <p class="largeText family buttonTextColor">Stavi u košaricu</p>
                         </button>
                     </form>
