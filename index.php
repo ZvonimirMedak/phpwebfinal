@@ -12,11 +12,10 @@ $query_builder = TRUE;
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 // sql to create table
 $sql = "CREATE TABLE Items (
-    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    id INT unsigned auto_increment primary key,
     name VARCHAR(50) NOT NULL,
-    amount INT(6) UNSIGNED NOT NULL,
-    price FLOAT(6) NOT NULL,
-    )";
+    amount INT unsigned NOT NULL,
+    price FLOAT(2) NOT NULL)";
     
     if ($conn->query($sql) === TRUE) {
       echo "Table MyGuests created successfully";
