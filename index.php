@@ -207,7 +207,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                             / kg
                         </p>
                     </div>
-                    <form  action='create.php' role="form" method='post'>
+                    <form  action='src/php/create.php' role="form" method='post'>
                         <div class="positionLeft cvarciMarginBottom">
                             <p class="mediumText family">Količina:</p>
                             <input type="text"  class="amountContainer" id="pileci_cvarci" size=1 value="name" name="name"/>
