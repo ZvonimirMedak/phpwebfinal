@@ -10,6 +10,19 @@ $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+// sql to create table
+$sql = "CREATE TABLE Items (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    amount INT(6) UNSIGNED NOT NULL,
+    price FLOAT UNSIGNED,
+    )";
+    
+    if ($conn->query($sql) === TRUE) {
+      echo "Table MyGuests created successfully";
+    } else {
+      echo "Error creating table: " . $conn->error;
+    }
 ?>
 
 <?php
