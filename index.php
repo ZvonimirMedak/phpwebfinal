@@ -21,16 +21,16 @@ $sql = "CREATE TABLE Items (
 
     // instantiate user object
     include_once 'src/php/Item.php';
-    $item = new Item($conn);
+    //$item = new Item($conn);
     // set user property values
     //$item->name = htmlentities(trim($_POST['name']));
     //$item->amount = htmlentities(trim($_POST['amount']));
     //$item->price = htmlentities(trim($_POST['price']));
-    $item->name = "čvarak";
-    $item->amount = 12;
-    $item->price = 50.0;
+    //$item->name = "čvarak";
+    //$item->amount = 12;
+    //$item->price = 50.0;
     // if the user able to create
-    if($item->create()){
+    /*if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
@@ -47,7 +47,7 @@ $sql = "CREATE TABLE Items (
                   </button>";
             echo "Error! Unable to create user.";
         echo "</div>";
-    }
+    }*/
     }
 ?>
 
