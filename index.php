@@ -11,9 +11,9 @@ $query_builder = TRUE;
 // Connect to DB
 $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 // sql to create table
-$sql = "CREATE TABLE Items (
+$sql = "CREATE TABLE newItems (
     id INT unsigned auto_increment primary key,
-    name VARCHAR(50) NOT NULL,
+    itemname VARCHAR(50) NOT NULL,
     amount INT unsigned NOT NULL,
     price FLOAT(2) NOT NULL)";
     // check if the form is submitted
@@ -27,7 +27,7 @@ $sql = "CREATE TABLE Items (
     $amount = 12;
     $price = 50.0;
     //write query
-    $sql = "INSERT INTO items SET name = ?, amount = ?, price = ?";
+    $sql = "INSERT INTO newItems SET itemname = ?, amount = ?, price = ?";
 
     $prep_state = $this->db_conn->prepare($sql);
 
