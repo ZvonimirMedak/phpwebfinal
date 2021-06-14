@@ -52,9 +52,9 @@ $cleardb_server = $cleardb_url["host"];
 $cleardb_username = $cleardb_url["user"];
 $cleardb_password = $cleardb_url["pass"];
 $cleardb_db = substr($cleardb_url["path"],1);
-echo $cleardb_url["user"]
-echo $cleardb_url["host"]
-echo $cleardb_url["pass"]
+//echo $cleardb_url["user"]
+//echo $cleardb_url["host"]
+//echo $cleardb_url["pass"]
 $active_group = 'default';
 $query_builder = TRUE;
 // Connect to DB
