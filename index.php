@@ -32,7 +32,7 @@ echo "</div>";
 
 
 // check if the form is submitted
-if (isset($_POST['submit'])){
+//if (isset($_POST['submit'])){
 
     // instantiate user object
     //include_once 'src/php/Item.php';
@@ -63,7 +63,7 @@ if (isset($_POST['submit'])){
             echo "Error! Unable to create user.";
         echo "</div>";
     }*/
-}
+//}
 ?>
 
 
