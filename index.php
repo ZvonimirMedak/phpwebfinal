@@ -21,7 +21,7 @@ echo "</div>";
 
 
 // check if the form is submitted
-if ($_POST){
+/*if ($_POST){
 
     // instantiate user object
     include_once 'src/php/Item.php';
@@ -54,7 +54,7 @@ if ($_POST){
             echo "Error! Unable to create user.";
         echo "</div>";
     }
-}
+}*/
 ?>
 
 
