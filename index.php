@@ -234,9 +234,10 @@ $sql = "CREATE TABLE newItems (
                     <form  method='POST'>
                         <div class="positionLeft cvarciMarginBottom">
                             <p class="mediumText family">Količina:</p>
-                            <input type="text"  class="amountContainer" id="pileci_cvarci" size=1 value="name" name="name"/>
-                            <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="price" name="price"/>
-                        <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1" name="amount"/>
+                            <input type="text"  class="amountContainer" id="input_name" size=1 value="name" name="name"/>
+                            <input type="number"  class="amountContainer" id="input_not_name" size=1 value="price" name="price"/>
+                        <input type="number"  class="amountContainer" id="input_not_not" size=1 value="1" name="amount"/>
+                        <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1"/>
                         </div>
                         <button id="pileci_cvarci_button" class="addToCartButton positionCenter" onclick="addToCart(pileci_cvarci)" name="submit" type="submit">
                             <p class="largeText family buttonTextColor">Stavi u košaricu</p>
