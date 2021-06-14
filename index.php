@@ -1,13 +1,23 @@
 <?php
-/*echo "<div class='right-button-margin'>";
+//Get Heroku ClearDB connection information
+//dodan komentar
+$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+$cleardb_server = $cleardb_url["host"];
+$cleardb_username = $cleardb_url["user"];
+$cleardb_password = $cleardb_url["pass"];
+$cleardb_db = substr($cleardb_url["path"],1);
+$active_group = 'default';
+$query_builder = TRUE;
+// Connect to DB
+$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+?>
+
+<?php
+echo "<div class='right-button-margin'>";
     echo "<a href='index.php' class='btn btn-info pull-right'>";
         echo "<span class='glyphicon glyphicon-list-alt'></span> Read Users ";
     echo "</a>";
 echo "</div>";
-
-// get database connection
-include_once 'src/php/Database.php';
-include_once 'src/php/initial.php';
 
 
 // check if the form is submitted
@@ -42,21 +52,9 @@ if ($_POST){
             echo "Error! Unable to create user.";
         echo "</div>";
     }
-}*/
+}
 ?>
-<?php
-//Get Heroku ClearDB connection information
-//dodan komentar
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-?>
+
 
 <!DOCTYPE html>
 <html lang="hr">
@@ -207,7 +205,7 @@ $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $c
                             / kg
                         </p>
                     </div>
-                    <form  action='src/php/create.php' role="form" method='post'>
+                    <form  method='post'>
                         <div class="positionLeft cvarciMarginBottom">
                             <p class="mediumText family">Količina:</p>
                             <input type="text"  class="amountContainer" id="pileci_cvarci" size=1 value="name" name="name"/>
