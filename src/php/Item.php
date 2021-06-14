@@ -22,14 +22,14 @@ class Item
     function create()
     {
         //write query
-        $sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
+        //$sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
 
-        $prep_state = $this->db_conn->prepare($sql);
+        //$prep_state = $this->db_conn->prepare($sql);
 
-        $prep_state->bindParam(1, $this->name);
-        $prep_state->bindParam(2, $this->amount);
-        $prep_state->bindParam(3, $this->price);
-
+        //$prep_state->bindParam(1, $this->name);
+        //$prep_state->bindParam(2, $this->amount);
+        //$prep_state->bindParam(3, $this->price);
+        return true
         if ($prep_state->execute()) {
             return true;
         } else {
