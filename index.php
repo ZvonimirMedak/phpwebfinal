@@ -20,8 +20,8 @@ $sql = "CREATE TABLE newItems (
     if (isset($_POST['submit'])){
 
     // instantiate user object
-    //include_once 'item.php';
-    //$item = new Item($conn);
+    include_once 'item.php';
+    $item = new Item($conn);
     // set user property values
     $name = "čvarak";
     $amount = 12;
