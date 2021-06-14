@@ -24,49 +24,6 @@ $sql = "CREATE TABLE Items (
     }
 ?>
 
-<?php
-echo "<div class='right-button-margin'>";
-    echo "<a href='index.php' class='btn btn-info pull-right'>";
-        echo "<span class='glyphicon glyphicon-list-alt'></span> Read Users ";
-    echo "</a>";
-echo "</div>";
-
-
-// check if the form is submitted
-/*if (isset($_POST['submit'])){
-
-    // instantiate user object
-    include_once 'src/php/Item.php';
-    $item = new Item($conn);
-    // set user property values
-    //$item->name = htmlentities(trim($_POST['name']));
-    //$item->amount = htmlentities(trim($_POST['amount']));
-    //$item->price = htmlentities(trim($_POST['price']));
-    $item->name = "čvarak";
-    $item->amount = 12;
-    $item->price = 50.0;
-    // if the user able to create
-    /*if($item->create()){
-        echo "<div class=\"alert alert-success alert-dismissable\">";
-            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
-                        &times;
-                  </button>";
-            echo "Success! User is created.";
-        echo "</div>";
-    }
-
-    // if the user unable to create
-    else{
-        echo "<div class=\"alert alert-danger alert-dismissable\">";
-            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
-                        &times;
-                  </button>";
-            echo "Error! Unable to create user.";
-        echo "</div>";
-    }*/
-}
-?>
-
 
 <!DOCTYPE html>
 <html lang="hr">
