@@ -238,7 +238,7 @@ $sql = "CREATE TABLE newItems (
                             <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="price" name="price"/>
                         <input type="number"  class="amountContainer" id="pileci_cvarci" size=1 value="1" name="amount"/>
                         </div>
-                        <button id="pileci_cvarci_button" class="addToCartButton positionCenter" name="submit" type="submit">
+                        <button id="pileci_cvarci_button" class="addToCartButton positionCenter" onclick="addToCart(pileci_cvarci)" name="submit" type="submit">
                             <p class="largeText family buttonTextColor">Stavi u košaricu</p>
                         </button>
                     </form>
