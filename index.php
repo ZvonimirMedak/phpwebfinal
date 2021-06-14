@@ -36,9 +36,10 @@ echo "</div>";
 if ($_POST){
 
     // instantiate user object
+    echo "hello"
     include_once 'src/php/Item.php';
     $item = new Item($conn);
-
+    echo "here"
     // set user property values
     //$item->name = htmlentities(trim($_POST['name']));
     //$item->amount = htmlentities(trim($_POST['amount']));
@@ -46,7 +47,7 @@ if ($_POST){
     $item->name = "čvarak";
     $item->amount = 12;
     $item->price = 50.0;
-
+    echo "zakon"
     // if the user able to create
     /*if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
