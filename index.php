@@ -15,7 +15,11 @@ $sql = "CREATE TABLE newItems (
     itemname VARCHAR(50) NOT NULL,
     amount INT unsigned NOT NULL,
     price FLOAT(2) NOT NULL)";
-    $conn->query($sql)
+   if ($conn->query($sql) === TRUE) {
+    echo "Table MyGuests created successfully";
+  } else {
+    echo "Error creating table: " . $conn->error;
+  }
     // check if the form is submitted
     if (isset($_POST['submit'])){
 
