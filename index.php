@@ -1,6 +1,5 @@
 <?php
 //Get Heroku ClearDB connection information
-//dodan komentar
 $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $cleardb_server = $cleardb_url["host"];
 $cleardb_username = $cleardb_url["user"];
@@ -29,7 +28,11 @@ $sql = "CREATE TABLE newItems (
     //write query
     $sql = "INSERT INTO newItems SET itemname = ?, amount = ?, price = ?";
 
-    //$prep_state = $conn->prepare($sql);
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
 
     //$prep_state->bindParam(1, $name);
     //$prep_state->bindParam(2, $amount);
