@@ -30,7 +30,7 @@ $sql = "CREATE TABLE newItems (
     $name = "čvarak";
     $amount = 1;
     $price = 12;
-    $item->name = "čvarak"
+    //$item->name = "čvarak"
     //$item->amount = $amount
     //$item->price = $price
     if($item->create()){
