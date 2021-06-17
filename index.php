@@ -25,15 +25,15 @@ $sql = "CREATE TABLE newItems (
 
     // instantiate user object
     include_once 'item.php';
-    $item = new Item($conn);
+    
     // set user property values
     $name = "čvarak";
     $amount = 1;
     $price = 12;
     //write query
-    $item->name = $name
+    /*$item->name = $name
     $item->amount = $amount
-    $item->price = $price
+    $item->price = $price*/
     if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
