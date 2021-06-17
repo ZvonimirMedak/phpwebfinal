@@ -24,13 +24,13 @@ class Item
         $sql = "INSERT INTO newItems (itemname, amount, price)
     VALUES ('$name', '$amount', '$price')";
 
-    if ($conn->query($sql) === TRUE) {
+    if ($db_conn->query($sql) === TRUE) {
         echo "New record created successfully";
       } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Error: " . $sql . "<br>" . $db_conn->error;
       }
       $sql = "SELECT itemname, amount, price FROM newItems";
-      $result = $conn->query($sql);
+      $result = $db_conn->query($sql);
       
       if ($result->num_rows > 0) {
         // output data of each row
