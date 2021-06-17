@@ -20,12 +20,14 @@ $sql = "CREATE TABLE newItems (
   } else {
     echo "Error creating table: " . $conn->error;
   }
+  include_once 'item.php';
+    $item = new Item($conn);
+  $item->create("čvarak", 12, 12);
     // check if the form is submitted
     if ($_POST){
 
     // instantiate user object
-    include_once 'item.php';
-    $item = new Item($conn);
+    
     // set user property values
     $name = "čvarak";
     $amount = 1;
@@ -33,7 +35,7 @@ $sql = "CREATE TABLE newItems (
     //$item->name = "čvarak"
     //$item->amount = $amount
     //$item->price = $price
-    if($item->create($name, $amount, $price)){
+    if(){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
