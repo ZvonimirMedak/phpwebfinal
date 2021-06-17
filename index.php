@@ -27,9 +27,9 @@ $sql = "CREATE TABLE newItems (
     //include_once "item.php";
     //$item = new Item($conn);
     // set user property values
-    $name = "čvarak";
-    $amount = 12;
-    $price = 50.0;
+    $name = $_POST['name'];
+    $amount = $_POST['amount'];
+    $price = $_POST['price'];
     //write query
     $sql = "INSERT INTO newItems (itemname, amount, price)
     VALUES ('$name', '$amount', '$price')";
