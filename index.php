@@ -21,7 +21,7 @@ $sql = "CREATE TABLE newItems (
     echo "Error creating table: " . $conn->error;
   }
     // check if the form is submitted
-    if ($_POST)){
+    if ($_POST){
 
     // instantiate user object
     include_once 'item.php';
