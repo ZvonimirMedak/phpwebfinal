@@ -33,6 +33,12 @@ $sql = "CREATE TABLE newItems (
     //$item->name = $name
     //$item->amount = $amount
     //$item->price = $price
+    echo "<div class=\"alert alert-success alert-dismissable\">";
+            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
+                        &times;
+                  </button>";
+            echo "Success! User is created.";
+        echo "</div>";
     if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
