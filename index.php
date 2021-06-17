@@ -30,15 +30,9 @@ $sql = "CREATE TABLE newItems (
     $name = "čvarak";
     $amount = 1;
     $price = 12;
-    $item->name = $name
-    $item->amount = $amount
-    $item->price = $price
-    echo "<div class=\"alert alert-success alert-dismissable\">";
-            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
-                        &times;
-                  </button>";
-            echo "Success! User is created.";
-        echo "</div>";
+    $item->name = "čvarak"
+    //$item->amount = $amount
+    //$item->price = $price
     if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
