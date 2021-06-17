@@ -207,7 +207,7 @@ $sql = "CREATE TABLE newItems (
                             / kg
                         </p>
                     </div>
-                    <form  method='POST'>
+                    <form action="" method='POST'>
                         <div class="positionLeft cvarciMarginBottom">
                             <p class="mediumText family">Količina:</p>
                             <input type="text"  class="amountContainer" id="input_name" size=1 value="name" name="name"/>
