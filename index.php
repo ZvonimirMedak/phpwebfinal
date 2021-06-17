@@ -24,7 +24,7 @@ $sql = "CREATE TABLE newItems (
     if (isset($_POST['submit'])){
 
     // instantiate user object
-    include_once "item.php";
+    include_once 'item.php';
     $item = new Item($conn);
     // set user property values
     $name = "čvarak";

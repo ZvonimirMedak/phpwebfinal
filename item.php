@@ -21,21 +21,25 @@ class Item
 
     function create()
     {
-        //write query
-        //$sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
+        $sql = "INSERT INTO newItems (itemname, amount, price)
+    VALUES ('$name', '$amount', '$price')";
 
-        //$prep_state = $this->db_conn->prepare($sql);
-
-        //$prep_state->bindParam(1, $this->name);
-        //$prep_state->bindParam(2, $this->amount);
-        //$prep_state->bindParam(3, $this->price);
-        return true
-        if ($prep_state->execute()) {
-            return true;
-        } else {
-            return false;
+    if ($conn->query($sql) === TRUE) {
+        echo "New record created successfully";
+      } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+      }
+      $sql = "SELECT itemname, amount, price FROM newItems";
+      $result = $conn->query($sql);
+      
+      if ($result->num_rows > 0) {
+        // output data of each row
+        while($row = $result->fetch_assoc()) {
+          return true
         }
-
+      } else {
+        return false
+      }
     }
 
     // for pagination
