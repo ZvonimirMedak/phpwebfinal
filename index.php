@@ -24,44 +24,17 @@ $sql = "CREATE TABLE newItems (
     if (isset($_POST['submit'])){
 
     // instantiate user object
-    //include_once "item.php";
-    //$item = new Item($conn);
+    include_once "item.php";
+    $item = new Item($conn);
     // set user property values
-    $name = $_POST['name'];
-    $amount = $_POST['amount'];
-    $price = $_POST['price'];
+    $name = "čvarak";
+    $amount = 1;
+    $price = 12;
     //write query
-    $sql = "INSERT INTO newItems (itemname, amount, price)
-    VALUES ('$name', '$amount', '$price')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-      }
-      $sql = "SELECT itemname, amount, price FROM newItems";
-      $result = $conn->query($sql);
-      
-      if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-          echo "id: " . $row["itemname"]. " - Name: " . $row["amount"]. " " . $row["price"]. "<br>";
-        }
-      } else {
-        echo "0 results";
-      }
-    //$prep_state->bindParam(1, $name);
-    //$prep_state->bindParam(2, $amount);
-    //$prep_state->bindParam(3, $price);
-    //$prep_state->execute()
-    //$item->name = htmlentities(trim($_POST['name']));
-    //$item->amount = htmlentities(trim($_POST['amount']));
-    //$item->price = htmlentities(trim($_POST['price']));
-    //$item->name = "čvarak";
-    //$item->amount = 12;
-    //$item->price = 50.0;
-    // if the user able to create
-    /*if($item->create()){
+    $item->name = $name
+    $item->amount = $amount
+    $item->price = $price
+    if($item->create()){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
@@ -69,8 +42,6 @@ $sql = "CREATE TABLE newItems (
             echo "Success! User is created.";
         echo "</div>";
     }
-
-    // if the user unable to create
     else{
         echo "<div class=\"alert alert-danger alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
@@ -78,7 +49,7 @@ $sql = "CREATE TABLE newItems (
                   </button>";
             echo "Error! Unable to create user.";
         echo "</div>";
-    }*/
+    }
     }
 ?>
 
