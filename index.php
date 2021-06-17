@@ -22,9 +22,8 @@ $sql = "CREATE TABLE newItems (
   }
   include_once 'item.php';
     $item = new Item($conn);*/
-    require 'Database.class.php';
+    include_once 'Database.class.php';
     $db = new Database();
-    $db->Connect();
     // check if the form is submitted
     if ($_POST){
 
