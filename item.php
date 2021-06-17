@@ -19,11 +19,10 @@ class Item
     }
 
 
-    function create($newName, $newAmount, $newPrice)
+    public function create($newName, $newAmount, $newPrice)
     {
         $sql = "INSERT INTO newItems (itemname, amount, price)
     VALUES ('$newName', '$newAmount', '$newPrice')";
-return true
     if ($db_conn->query($sql) === TRUE) {
         echo "New record created successfully";
       } else {
@@ -31,7 +30,6 @@ return true
       }
       $sql = "SELECT itemname, amount, price FROM newItems";
       $result = $db_conn->query($sql);
-      return true
       if ($result->num_rows > 0) {
         // output data of each row
         while($row = $result->fetch_assoc()) {
