@@ -4,7 +4,7 @@ class Item
 {
     // table name definition and database connection
     public $db_conn;
-    public $table_name = "items";
+    public $table_name = "data";
 
     // object properties
     public $id;
@@ -19,29 +19,23 @@ class Item
     }
 
 
-    public function create($newName, $newAmount, $newPrice)
+    public function create()
     {
-        return true
-    /*    $sql = "INSERT INTO newItems (itemname, amount, price)
-    VALUES ('$newName', '$newAmount', '$newPrice')";
-    if ($db_conn->query($sql) === TRUE) {
-        echo "New record created successfully";
-      } else {
-        echo "Error: " . $sql . "<br>" . $db_conn->error;
-      }
-      $sql = "SELECT itemname, amount, price FROM newItems";
-      $result = $db_conn->query($sql);
-      if ($result->num_rows > 0) {
-        // output data of each row
-        while($row = $result->fetch_assoc()) {
-          
+        $sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
+
+        $prep_state = $this->db_conn->prepare($sql);
+
+        $prep_state->bindParam(1, $this->name);
+        $prep_state->bindParam(2, $this->amount);
+        $prep_state->bindParam(3, $this->price);
+
+        if ($prep_state->execute()) {
+            return true;
+        } else {
+            return false;
         }
-      } else {
-        return false
-      }*/
     }
 
-    // for pagination
     public function countAll()
     {
         $sql = "SELECT id FROM " . $this->table_name . "";
@@ -53,8 +47,7 @@ class Item
         return $num;
     }
 
-
-    function update()
+    public function update()
     {
         $sql = "UPDATE " . $this->table_name . " SET name = :name, amount = :amount, price = :price WHERE id = :id";
         // prepare query
@@ -74,41 +67,32 @@ class Item
         }
     }
 
-
-    function delete($id)
+    public function delete($id)
     {
         $sql = "DELETE FROM " . $this->table_name . " WHERE id = :id ";
 
         $prep_state = $this->db_conn->prepare($sql);
         $prep_state->bindParam(':id', $this->id);
 
-        if ($prep_state->execute(array(":id" => $_GET['id']))) {
+        if ($prep_state->execute(array(":id" => $id))) {
             return true;
         } else {
             return false;
         }
     }
 
-
-    function getAllItems()
+    public function getAllItems()
     {
-        $sql = "SELECT id, name, amount, price FROM " . $this->table_name . " ORDER BY name ASC LIMIT ?, ?";
+        $sql = "SELECT id, name, amount, price FROM " . $this->table_name . " ORDER BY name ASC";
 
 
         $prep_state = $this->db_conn->prepare($sql);
-
-
-       // $prep_state->bindParam(1, $from_record_num, PDO::PARAM_INT); //Represents the SQL INTEGER data type.
-        //$prep_state->bindParam(2, $records_per_page, PDO::PARAM_INT);
-
-
         $prep_state->execute();
 
         return $prep_state;
         $db_conn = NULL;
     }
 
-    // for edit user form when filling up
     function getItem()
     {
         $sql = "SELECT name, amount, price FROM " . $this->table_name . " WHERE id = :id";
@@ -123,6 +107,4 @@ class Item
         $this->amount = $row['amount'];
         $this->price = $row['price'];
     }
-
-
 }

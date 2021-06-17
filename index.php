@@ -1,178 +1,23 @@
 <?php
-//Get Heroku ClearDB connection information
-$cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-$cleardb_server = $cleardb_url["host"];
-$cleardb_username = $cleardb_url["user"];
-$cleardb_password = $cleardb_url["pass"];
-$cleardb_db = substr($cleardb_url["path"],1);
-$active_group = 'default';
-$query_builder = TRUE;
-// Connect to DB
-$conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
-// sql to create table
-$sql = "CREATE TABLE newItems (
-    id INT unsigned auto_increment primary key,
-    itemname VARCHAR(50) NOT NULL,
-    amount INT unsigned NOT NULL,
-    price FLOAT(2) NOT NULL)";
-   if ($conn->query($sql) === TRUE) {
-    echo "Table MyGuests created successfully";
-  } else {
-    echo "Error creating table: " . $conn->error;
-  }
-  class Item
-  {
-      // table name definition and database connection
-      public $db_conn;
-      public $table_name = "items";
-  
-      // object properties
-      public $id;
-      public $name;
-      public $amount;
-      public $price;
-  
-  
-      public function __construct($db)
-      {
-          $this->db_conn = $db;
-      }
-  
-  
-      public function create($newName, $newAmount, $newPrice)
-      {
-          return true
-          $sql = "INSERT INTO newItems (itemname, amount, price)
-      VALUES ('$newName', '$newAmount', '$newPrice')";
-      if ($db_conn->query($sql) === TRUE) {
-          echo "New record created successfully";
-        } else {
-          echo "Error: " . $sql . "<br>" . $db_conn->error;
-        }
-        $sql = "SELECT itemname, amount, price FROM newItems";
-        $result = $db_conn->query($sql);
-        if ($result->num_rows > 0) {
-          // output data of each row
-          while($row = $result->fetch_assoc()) {
-            
-          }
-        } else {
-          return false
-        }
-      }
-  
-      // for pagination
-      public function countAll()
-      {
-          $sql = "SELECT id FROM " . $this->table_name . "";
-  
-          $prep_state = $this->db_conn->prepare($sql);
-          $prep_state->execute();
-  
-          $num = $prep_state->rowCount(); //Returns the number of rows affected by the last SQL statement
-          return $num;
-      }
-  
-  
-      function update()
-      {
-          $sql = "UPDATE " . $this->table_name . " SET name = :name, amount = :amount, price = :price WHERE id = :id";
-          // prepare query
-          $prep_state = $this->db_conn->prepare($sql);
-  
-  
-          $prep_state->bindParam(':name', $this->name);
-          $prep_state->bindParam(':amount', $this->amount);
-          $prep_state->bindParam(':price', $this->price);
-          $prep_state->bindParam(':id', $this->id);
-  
-          // execute the query
-          if ($prep_state->execute()) {
-              return true;
-          } else {
-              return false;
-          }
-      }
-  
-  
-      function delete($id)
-      {
-          $sql = "DELETE FROM " . $this->table_name . " WHERE id = :id ";
-  
-          $prep_state = $this->db_conn->prepare($sql);
-          $prep_state->bindParam(':id', $this->id);
-  
-          if ($prep_state->execute(array(":id" => $_GET['id']))) {
-              return true;
-          } else {
-              return false;
-          }
-      }
-  
-  
-      function getAllItems()
-      {
-          $sql = "SELECT id, name, amount, price FROM " . $this->table_name . " ORDER BY name ASC LIMIT ?, ?";
-  
-  
-          $prep_state = $this->db_conn->prepare($sql);
-  
-  
-         // $prep_state->bindParam(1, $from_record_num, PDO::PARAM_INT); //Represents the SQL INTEGER data type.
-          //$prep_state->bindParam(2, $records_per_page, PDO::PARAM_INT);
-  
-  
-          $prep_state->execute();
-  
-          return $prep_state;
-          $db_conn = NULL;
-      }
-  
-      // for edit user form when filling up
-      function getItem()
-      {
-          $sql = "SELECT name, amount, price FROM " . $this->table_name . " WHERE id = :id";
-  
-          $prep_state = $this->db_conn->prepare($sql);
-          $prep_state->bindParam(':id', $this->id);
-          $prep_state->execute();
-  
-          $row = $prep_state->fetch(PDO::FETCH_ASSOC);
-  
-          $this->name = $row['name'];
-          $this->amount = $row['amount'];
-          $this->price = $row['price'];
-      }
-  
-  
-  }
-  $item = new Item($conn)
-    
-    // check if the form is submitted
+
+  include_once('src/php/database.php');
+  include_once('src/php/initial.php');
+
     if ($_POST){
 
-    // instantiate user object
-    
-    // set user property values
-    $name = "čvarak";
-    $amount = 1;
-    $price = 12;
-    /*if($item->create($name, $amount, $price)){
-        echo "<div class=\"alert alert-success alert-dismissable\">";
-            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
-                        &times;
-                  </button>";
-            echo "Success! User is created.";
-        echo "</div>";
-    }
-    else{
-        echo "<div class=\"alert alert-danger alert-dismissable\">";
-            echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
-                        &times;
-                  </button>";
-            echo "Error! Unable to create user.";
-        echo "</div>";
-    }*/
+        include_once('src/php/item.php');
+        $item = new Item($db);
+        $prep_state = $item->getAllItems();
+        
+        $item->name = htmlentities(trim($_POST['name']));
+        $item->amount = htmlentities(trim($_POST['amount']));
+        $item->price = htmlentities(trim($_POST['price']));
+        if($item->create()){
+            echo "Item is created";
+        }
+        else{
+            echo "Error";
+        }
     }
 ?>
 
