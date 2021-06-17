@@ -146,7 +146,7 @@ $sql = "CREATE TABLE newItems (
   
   
   }
-    $item = new Item($conn)
+    
     // check if the form is submitted
     if ($_POST){
 
