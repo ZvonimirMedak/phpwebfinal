@@ -22,7 +22,7 @@ $sql = "CREATE TABLE newItems (
   }
   include_once 'item.php';
     $item = new Item($conn);*/
-    require_once('database.php');
+    require_once('Database.php');
     $db = new Database();
     // check if the form is submitted
     if ($_POST){
