@@ -19,10 +19,10 @@ class Item
     }
 
 
-    function create()
+    function create($newName, $newAmount, $newPrice)
     {
         $sql = "INSERT INTO newItems (itemname, amount, price)
-    VALUES ('$name', '$amount', '$price')";
+    VALUES ('$newName', '$newAmount', '$newPrice')";
 
     if ($db_conn->query($sql) === TRUE) {
         echo "New record created successfully";

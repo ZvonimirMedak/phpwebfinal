@@ -33,7 +33,7 @@ $sql = "CREATE TABLE newItems (
     //$item->name = "čvarak"
     //$item->amount = $amount
     //$item->price = $price
-    if($item->create()){
+    if($item->create($name, $amount, $price)){
         echo "<div class=\"alert alert-success alert-dismissable\">";
             echo "<button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">
                         &times;
