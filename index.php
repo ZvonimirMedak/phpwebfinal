@@ -2,18 +2,18 @@
 
   include_once('src/php/database.php');
   include_once('src/php/initial.php');
-  $sql = "CREATE TABLE items (
+  /*$sql = "CREATE TABLE items (
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
     amount INT NOT NULL,
     price FLOAT
     )";
-    $db->prepare($sql);
+    $prep_state = $db->prepare($sql);
     if ($prep_state->execute()) {
-        echo "napravljeno"
+        echo "napravljeno";
     } else {
-        echo "već postoji"
-    }
+        echo "već postoji";
+    }*/
     if ($_POST){
 
         include_once('src/php/item.php');
