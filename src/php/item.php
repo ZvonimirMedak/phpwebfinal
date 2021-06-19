@@ -4,7 +4,7 @@ class Item
 {
     // table name definition and database connection
     public $db_conn;
-    public $table_name = "data";
+    public $table_name = "cvarci";
 
     // object properties
     public $id;
