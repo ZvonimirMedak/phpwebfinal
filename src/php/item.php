@@ -4,13 +4,14 @@ class Item
 {
     // table name definition and database connection
     public $db_conn;
-    public $table_name = "cvarci";
+    public $table_name = "cvarciitems";
 
     // object properties
     public $id;
     public $name;
     public $amount;
     public $price;
+    public $imageURL;
 
 
     public function __construct($db)
@@ -21,14 +22,14 @@ class Item
 
     public function create()
     {
-        $sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?";
+        $sql = "INSERT INTO " . $this->table_name . " SET name = ?, amount = ?, price = ?, imageURL = ?";
 
         $prep_state = $this->db_conn->prepare($sql);
 
         $prep_state->bindParam(1, $this->name);
         $prep_state->bindParam(2, $this->amount);
         $prep_state->bindParam(3, $this->price);
-
+        $prep_state->bindParam(4, $this->imageURL);
         if ($prep_state->execute()) {
             return true;
         } else {
@@ -49,7 +50,7 @@ class Item
 
     public function update()
     {
-        $sql = "UPDATE " . $this->table_name . " SET name = :name, amount = :amount, price = :price WHERE id = :id";
+        $sql = "UPDATE " . $this->table_name . " SET name = :name, amount = :amount, price = :price, imageURL = :imageURL WHERE id = :id";
         // prepare query
         $prep_state = $this->db_conn->prepare($sql);
 
@@ -58,6 +59,7 @@ class Item
         $prep_state->bindParam(':amount', $this->amount);
         $prep_state->bindParam(':price', $this->price);
         $prep_state->bindParam(':id', $this->id);
+        $prep_state->bindParam(':imageURL', $this->imageURL);
 
         // execute the query
         if ($prep_state->execute()) {
@@ -83,7 +85,7 @@ class Item
 
     public function getAllItems()
     {
-        $sql = "SELECT id, name, amount, price FROM " . $this->table_name . " ORDER BY name ASC";
+        $sql = "SELECT id, name, amount, price, imageURL FROM " . $this->table_name . " ORDER BY name ASC";
 
 
         $prep_state = $this->db_conn->prepare($sql);
@@ -95,7 +97,7 @@ class Item
 
     function getItem()
     {
-        $sql = "SELECT name, amount, price FROM " . $this->table_name . " WHERE id = :id";
+        $sql = "SELECT name, amount, price, imageURL FROM " . $this->table_name . " WHERE id = :id";
 
         $prep_state = $this->db_conn->prepare($sql);
         $prep_state->bindParam(':id', $this->id);
@@ -106,5 +108,6 @@ class Item
         $this->name = $row['name'];
         $this->amount = $row['amount'];
         $this->price = $row['price'];
+        $this->imageURL = $row['imageURL'];
     }
 }

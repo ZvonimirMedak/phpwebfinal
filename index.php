@@ -2,10 +2,22 @@
 
   include_once('src/php/database.php');
   include_once('src/php/initial.php');
- 
-    if ($_POST){
+
         include_once('src/php/item.php');
         $item = new Item($db);
+        
+        
+        $item->name = htmlentities(trim($_POST['name']));
+        $item->amount = htmlentities(trim($_POST['amount']));
+        $item->price = htmlentities(trim($_POST['price']));
+        $item->imageURL = "https";
+        #$item->imageURL = htmlentities(trim($_POST['imageURL']));
+        if($item->create()){
+            echo "Item is created";
+        }
+        else{
+            echo "Error";
+        }
         $prep_state = $item->getAllItems();
         echo "<table>";
         while ($row = $prep_state->fetch(PDO::FETCH_ASSOC)){
@@ -14,6 +26,8 @@
             echo "<td>$row[name]</td>";
             echo "<td>$row[amount]</td>";
             echo "<td>$row[price]</td>";
+            echo "<td>$row[imageURL]</td>";
+            echo "<td>$row[id]</td>";
             echo "<td>";
             
             echo "<a href='edit.php?id=" . $id . "' class='btn btn-warning left-margin'>";
@@ -30,18 +44,6 @@
         }
     
         echo "</table>";
-        
-        
-       /* $item->name = htmlentities(trim($_POST['name']));
-        $item->amount = htmlentities(trim($_POST['amount']));
-        $item->price = htmlentities(trim($_POST['price']));
-        if($item->create()){
-            echo "Item is created";
-        }
-        else{
-            echo "Error";
-        }*/
-    }
 ?>
 
 <!DOCTYPE html>
