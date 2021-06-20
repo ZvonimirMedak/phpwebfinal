@@ -2,13 +2,37 @@
 
   include_once('src/php/database.php');
   include_once('src/php/initial.php');
+ 
     if ($_POST){
-
         include_once('src/php/item.php');
         $item = new Item($db);
         $prep_state = $item->getAllItems();
+        echo "<table>";
+        while ($row = $prep_state->fetch(PDO::FETCH_ASSOC)){
+            extract($row);
+            echo "<tr>";
+            echo "<td>$row[name]</td>";
+            echo "<td>$row[amount]</td>";
+            echo "<td>$row[price]</td>";
+            echo "<td>";
+            
+            echo "<a href='edit.php?id=" . $id . "' class='btn btn-warning left-margin'>";
+            echo "<span class='glyphicon glyphicon-edit'></span> Edit";
+            echo "</a>";
+    
+
+            echo "<a href='delete.php?id=" . $id . "' class='btn btn-danger delete-object'>";
+            echo "<span class='glyphicon glyphicon-remove'></span> Delete";
+            echo "</a>";
+    
+            echo "</td>";
+            echo "</tr>";
+        }
+    
+        echo "</table>";
         
-        $item->name = htmlentities(trim($_POST['name']));
+        
+       /* $item->name = htmlentities(trim($_POST['name']));
         $item->amount = htmlentities(trim($_POST['amount']));
         $item->price = htmlentities(trim($_POST['price']));
         if($item->create()){
@@ -16,7 +40,7 @@
         }
         else{
             echo "Error";
-        }
+        }*/
     }
 ?>
 
