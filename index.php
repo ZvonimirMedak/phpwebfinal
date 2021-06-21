@@ -2,7 +2,7 @@
 
   include_once('src/php/database.php');
   include_once('src/php/initial.php');
-
+    if($_POST) {
         include_once('src/php/item.php');
         $item = new Item($db);
         
@@ -10,9 +10,9 @@
         $item->name = htmlentities(trim($_POST['name']));
         $item->amount = htmlentities(trim($_POST['amount']));
         $item->price = htmlentities(trim($_POST['price']));
-        $item->imageURL = "https";
+        $item->imageURL = "https://i.ibb.co/LrGqJdz/cvarci-od-divljaci.png";
         #$item->imageURL = htmlentities(trim($_POST['imageURL']));
-        if($item->create()){
+        if($item->delete()){
             echo "Item is created";
         }
         else{
@@ -44,6 +44,7 @@
         }
     
         echo "</table>";
+    } 
 ?>
 
 <!DOCTYPE html>
